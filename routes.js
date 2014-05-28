@@ -1,8 +1,6 @@
 var fs   = require('fs');
 
 module.exports = function(path, response) {
-    console.log("Routing "+path);
-    
     var filename = false;
     var filetype = "html";
     switch(path) {
@@ -29,6 +27,8 @@ module.exports = function(path, response) {
     }
     
     if(filename) {
+        console.log("Routing "+path);
+        
         response.writeHead('200', {"Content-Type": "text/"+filetype});
         fs.createReadStream("public/"+filename)
           .on('end', function() {

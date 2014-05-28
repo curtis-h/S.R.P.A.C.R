@@ -1,0 +1,8 @@
+{
+  "name": "Super-Robot-Panic-Attack-Control-Room",
+  "version": "0.0.1",
+  "description": "Playing around with nodejs",
+  "dependencies": {
+    "socket.io": "~1.0.2"
+  }
+}
